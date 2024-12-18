@@ -1,0 +1,188 @@
+\documentclass{ldr-simple-gray}
+
+
+%------------------------------------------------------------
+%首页start
+\title{基于机器学习的植物病害分析与预测模型构建}
+
+\subtitle{}
+
+\author{饶永祺}
+
+\institute[]
+{
+导师：刘向研究员\\
+% 记得改啊，老是有人不改学院……
+兰州大学\quad 数学与统计学院
+}
+
+\date{\today}
+
+% \logo{\includegraphics[height=1cm]{lzu_logo.png}}
+\titlegraphic{\includegraphics[height=1.5cm]{lzu_logo.png}}
+
+%首页end
+%------------------------------------------------------------
+
+\begin{document}
+
+%封面
+\frame{\titlepage}
+
+
+\begin{frame}{个人信息}
+
+    \begin{itemize}
+        % 记得改啊
+        \item 姓名：饶永祺
+        \item 导师：刘向研究员
+        \item 专业：应用统计学
+    \end{itemize}
+
+    \qquad \noindent\rule[0.25\baselineskip]{0.9\textwidth}{1pt}
+
+    \begin{itemize}
+        \item 硕士：2022-至今 \quad 兰州大学 \quad 兰州大学数学与统计学院
+    \end{itemize}
+
+    \qquad \noindent\rule[0.25\baselineskip]{0.9\textwidth}{1pt}
+
+    % \begin{itemize}
+    %     % \item 已发表文章：梦里什么都有 ~
+    % \end{itemize}
+\end{frame}
+
+% 要把今天讲的研究背景、主要结果、价值和意义（贡献点）讲清楚
+
+\section{研究背景}
+
+\begin{frame}{相关解释}
+    \begin{itemize}
+        \item 随着全球气候变化和农业生产规模的扩大，植物病害对农业生产的威胁愈加严重，尤其在中国这样的农业大国，病害的空间和时间变化特征为预测和防治带来了挑战。
+        传统的病害预测方法依赖人工观察，既费时又易受人为干扰，且准确性有限。虽然遥感和传感器技术提高了病害检测精度，但仍需大量人工干预，难以实现自动化和实时监控。
+
+        \item 集成学习方法作为一种高效的数据分析工具，已逐渐应用于植物病害预测。通过结合多个弱学习器的预测结果，集成学习提高了模型在复杂农业数据环境中的稳定性和准确性，
+        能够融合气象、土壤、作物生长和历史病害数据，从而精准预测病害。该方法为农业生产提供了更高效的病害预警系统，帮助农民制定有效的防治方案，提高农业生产的可持续性和安全性。
+    \end{itemize}
+    
+\end{frame}
+
+
+\begin{frame}{现有研究}
+    草地对动物产业、土壤保护和生物多样性至关重要，但植物病害会降低产量和营养价值
+（S. Chakraborty et al. 2018）。病害选择性地影响了某些物种，
+从而减少了群落内的物种多样性和丰富度。(Rita L. Grunberg et al. 2023)染病和健康的苜蓿的蛋白质含量
+(Sheau-Fang Hwang et al. 2004)
+
+
+    % \begin{figure}
+    %     \subfigure[2nm、10-160\%\footfullcite{Zhang2011}]{
+    %         \includegraphics[width=0.28\textwidth]{lammps.png}
+    %      }
+    %      \subfigure[5nm、50-350\%\footfullcite{Zhang2011}]{
+    %          \includegraphics[width=0.36\textwidth]{lammps.png}
+    %       }\\
+    %     \subfigure[20nm、25-45\%\footfullcite{Zhang2011}]{
+    %         \includegraphics[width=0.4\textwidth]{lammps.png}
+    %      }
+    % \end{figure}
+\end{frame}
+
+\begin{frame}{现有研究}
+    降水，二氧化碳浓度变化会对植物病害产生影响。
+    降水增加会显著提高杂草的植物病害严重程度
+    (Anne Ebeling et al. 2019)CO₂浓度升高，
+    植物病原体感染能力增强
+    (Sukumar Chakraborty et al. 2018)
+    
+    
+
+    % \begin{figure}
+    %     \subfigure[2nm、10-160\%\footfullcite{Zhang2011}]{
+    %         \includegraphics[width=0.28\textwidth]{lammps.png}
+    %      }
+    %      \subfigure[5nm、50-350\%\footfullcite{Zhang2011}]{
+    %          \includegraphics[width=0.36\textwidth]{lammps.png}
+    %       }\\
+    %     \subfigure[20nm、25-45\%\footfullcite{Zhang2011}]{
+    %         \includegraphics[width=0.4\textwidth]{lammps.png}
+    %      }
+    % \end{figure}
+\end{frame}
+
+
+\begin{frame}{现有研究}
+气候变化对导致气候格局发生改变进而增加或降低植物病害。气候变化导致英国地区部分地区极端天气增多
+(Francislene Angelotti et al. 2024)
+
+\end{frame}
+
+
+\section{研究路线}
+
+\begin{frame}{做了啥？}
+    在中国草地的实地调查中，共收集了 193个样点 的植物病害数据。这些样点分布在 26个省级行政区 中，数据量以甘肃省和云南省最多（各13条），其次为河北省（12条）和陕西省（11条）。
+    每个样点包含 3-4个样方，共计记录了 770条详细数据。
+   
+    [1] Fick SE, Hijmans RJ. WorldClim 2: new 1-km spatial resolution climate surfaces for global land areas. International Journal of Climatology 37, 4302-4315 (2017).
+    [2] FAO/IIASA/ISRIC/ISS-CAS/JRC. Harmonized World Soil Database (version 1.2). FAO, Rome, Italy and IIASA, Laxenburg, Austria, (2012).
+    
+
+
+\end{frame}
+\section{研究结果}
+\begin{frame}{采样点分布}
+    
+    \begin{itemize}
+        \item 统计结果显示，各个省份和自治区在数据中的出现频次有所不同。甘肃省和云南省的数据量最大，每个省份分别出现了13次，其次是河北省，出现了12次。陕西省和黑龙江省分别出现了11次，位居第三。
+        
+        \item 总体来看，数据集中不同省份和自治区的分布存在一定的差异，部分省份的数据频次较高，而其他省份的频次则相对较低。
+        
+    \end{itemize}
+    
+\end{frame}
+
+
+\begin{frame}{变量重要性}
+    
+    \begin{itemize}
+        \item 土壤特征中，\texttt{T\_SAND\_T\_SAND} 明显占据主导地位，表明土壤中砂的含量对目标变量具有核心影响。其他土壤特征如 \texttt{T\_GRAVEL\_T\_GRAVEL} 和 \texttt{S\_PH\_H2O\_S\_PH\_H2O} 的重要性评分虽然相对较低，但仍然对预测结果提供了一定的解释力。
+        
+        
+        \item 气候特征中，\texttt{SRAD}（太阳辐射）相关变量的重要性普遍较高，如 \texttt{WC2.1\_5M\_SRAD\_02} 和 \texttt{WC2.1\_5M\_SRAD\_06}，反映出太阳辐射在模型中的重要性。此外，气候特征整体数量较多，虽然单个特征的重要性评分不及 \texttt{T\_SAND\_T\_SAND}，但其累积贡献不可忽视，表明气候因素对目标变量的预测具有广泛作用。
+        
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}{shap图}
+    
+    \begin{itemize}
+        \item 根据SHAP值的结果，我们可以看出，在影响模型预测的特征中，\texttt{\break T\_SAND\_T\_SAND\_resampled} 对预测结果的影响最大，SHAP值为 0.632217，表明该特征对模型输出的贡献较大。  
+        
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}{绘制预测图}
+    
+
+    
+\end{frame}
+
+
+
+\begin{frame}{气候变化对植物病害变化的影响}
+    
+
+    
+\end{frame}
+
+\begin{frame}{\quad}
+\begin{center}
+       \zihao{2} 谢\quad 谢！
+\end{center}
+
+\end{frame}
+
+\end{document}
